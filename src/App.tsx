@@ -20,7 +20,7 @@ function App() {
   const [tags, setTags] = useState<string[]>([]);
 
   const createTags = (input: string): void =>{
-    const tagsValue = input.split('.').filter(tag => tag.trim() !== '').map(tag => tag.trim());
+    const tagsValue = input.split(' ').filter(tag => tag.trim() !== '').map(tag => tag.trim());
     setTags(tagsValue)
   }
 
@@ -62,7 +62,7 @@ function App() {
 
   return (
     <div className="container">
-      <h3>Enter all of the choices divided by a comma (' . '). <br />
+      <h3>Enter all of the choices divided by a space. <br />
           Press enter when you're done</h3>
 
       <textarea id="textarea" placeholder="Enter choices here..." onKeyUp={handleKeyUp} autoFocus></textarea>
