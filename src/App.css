@@ -14,6 +14,7 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  position: relative;
 }
 
 h3 {
@@ -35,6 +36,7 @@ textarea {
   padding: 10px;
   margin: 0 0 20px;
   font-size: 16px;
+  resize: none;
 }
 
 textarea:focus {
@@ -54,4 +56,54 @@ textarea:focus {
 
 .tag.highlight {
   background-color: #273c75;
+}
+
+.word-wrapper{
+  background-color: #273c75;
+
+  /* background-color: rgba(39, 60, 117, 0.7); */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.word-wrapper article{
+  text-align: center;
+}
+
+.word-picked{
+  color: #f0932b;
+  font-size: 50px;
+  align-self: center;
+
+}
+
+button{
+  border: none;
+  outline: none;
+  appearance: none;
+  font-family: inherit;
+  background-color: #fff;
+  color: #2b88f0;
+
+  width: 200px;
+  padding: 10px 0;
+  align-self: center;
+  border-radius: 50px;
+  font-weight:bold;
+  transform: translateY(10em);
+  transition: all 0.2s ease;
+}
+
+button:hover{
+  background-color: #2b88f0;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }

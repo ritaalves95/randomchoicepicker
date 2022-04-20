@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
+import WordPicked from './WordPicked';
 
 function App() {
 //  handle key up event
@@ -25,6 +26,8 @@ function App() {
   }
 
 //  random selection
+  const [tagSelected, setTagSelected] = useState<string>('');
+
   const randomSelect = () => {
     const times = 30;
 
@@ -43,6 +46,8 @@ function App() {
         setTimeout(()=>{
             const randomTag = pickRandomTag();
             highlightTag(randomTag)
+            setTagSelected(randomTag.innerHTML)
+            console.log(randomTag.innerHTML)
         }, 100)
     },times * 100)
   }
@@ -74,6 +79,8 @@ function App() {
           )
         })}
       </div>
+
+      {tagSelected !== '' && <WordPicked word={tagSelected} resetTags={() => setTags([])} resetWord={() => setTagSelected('')} />}
     </div>
   );
 }
