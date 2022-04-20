@@ -58,10 +58,9 @@ textarea:focus {
   background-color: #273c75;
 }
 
+/*   show winner   */
 .word-wrapper{
   background-color: #273c75;
-
-  /* background-color: rgba(39, 60, 117, 0.7); */
   position: absolute;
   width: 100%;
   height: 100%;
@@ -75,13 +74,13 @@ textarea:focus {
 
 .word-wrapper article{
   text-align: center;
+  z-index: 2;
 }
 
 .word-picked{
   color: #f0932b;
   font-size: 50px;
   align-self: center;
-
 }
 
 button{
@@ -107,3 +106,11 @@ button:hover{
   cursor: pointer;
   transition: all 0.2s ease;
 }
+
+/*  confetti wrapper   */
+.confetti-wrapper{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+} 
