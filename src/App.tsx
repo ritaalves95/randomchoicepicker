@@ -4,14 +4,13 @@ import './App.css';
 function App() {
 //  handle key up event
   const handleKeyUp = (e: React.KeyboardEvent):void => {
-    console.log((e.target as HTMLInputElement).value)
     let value = (e.target as HTMLInputElement).value
 
     createTags(value);
 
     if(e.key === 'Enter') {
       setTimeout(()=> {
-          // e.target.value = ''
+        (e.target as HTMLInputElement).value = ''
       }, 10)
       randomSelect()
     }
